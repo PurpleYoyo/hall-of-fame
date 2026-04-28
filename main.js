@@ -20,8 +20,13 @@ function formatSpriteName(pokemon) { // To be used for specific special cases.
     return pokemon.toLowerCase();
 }
 
-function getSprite(pokemon) {
-    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/LittleEmerald-SaveReader/main/sprites/${formatSpriteName(pokemon)}.png" alt="${pokemon}"></img>`;
+function getSprite(entry, index) {
+    const sprite_override = entry.sprite_overrides?.[`pokemon${index}`];
+    const pokemon = entry[`pokemon${index}`];
+    const src = sprite_override ?
+        sprite_override :
+        `https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${formatSpriteName(pokemon)}.png`;
+    return `<img src="${src}" alt="${pokemon}">`;
 }
 
 const gameSchemas = {
@@ -61,12 +66,12 @@ function buildHofTable() {
     let entries = hofData[game][run_type].map(entry => `
         <tr>
             ${schema.map(col => `<td>${entry[col.key] ?? '-'}</td>`).join('')}
-            <td>${getSprite(entry.pokemon1)}</td>
-            <td>${getSprite(entry.pokemon2)}</td>
-            <td>${getSprite(entry.pokemon3)}</td>
-            <td>${getSprite(entry.pokemon4)}</td>
-            <td>${getSprite(entry.pokemon5)}</td>
-            <td>${getSprite(entry.pokemon6)}</td>
+            <td>${getSprite(entry, 1)}</td>
+            <td>${getSprite(entry, 2)}</td>
+            <td>${getSprite(entry, 3)}</td>
+            <td>${getSprite(entry, 4)}</td>
+            <td>${getSprite(entry, 5)}</td>
+            <td>${getSprite(entry, 6)}</td>
         </tr>    
     `);
 

@@ -45,7 +45,12 @@
                 "pokemon3": "Meowth-Galar",
                 "pokemon4": "Eevee-Dark",
                 "pokemon5": "Qwilfish-Hisui",
-                "pokemon6": "Litten"
+                "pokemon6": "Litten",
+                "sprite_overrides": [
+                    {
+                        "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/pawniard-shiny.png"
+                    }
+                ]
             }
         ]
     },
@@ -73,7 +78,12 @@
                 "pokemon3": "Shellder",
                 "pokemon4": "Magnemite",
                 "pokemon5": "Morelull",
-                "pokemon6": "Cutiefly"
+                "pokemon6": "Cutiefly",
+                "sprite_overrides": [
+                    {
+                        "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"
+                    }
+                ]
             }
         ],
         "casual": []
