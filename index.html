@@ -15,18 +15,22 @@
     
     <br>
 
-    <input type="radio" id="little_emerald" value="little_emerald" name="game">
-    <label for="little_emerald">Little Emerald</label>
-    <input type="radio" id="mini_moon" value="mini_moon" name="game">
-    <label for="mini_moon">Mini Moon</label>
+    <div id="game-radios">
+        <input type="radio" id="little_emerald" value="little_emerald" name="game">
+        <label for="little_emerald">Little Emerald</label>
+        <input type="radio" id="mini_moon" value="mini_moon" name="game">
+        <label for="mini_moon">Mini Moon</label>
+    </div>
 
     <span id ="hint">Choose a game to see the Hall of Fame.</span>
 
     <div id="hall-of-fame" class="hidden">
-        <input type="radio" id="hardcore_nuzlockes" value="hardcore_nuzlockes" name="run-type" checked>
-        <label for="hardcore_nuzlockes">Hardcore Nuzlockes</label>
-        <input type="radio" id="casual" value="casual" name="run-type">
-        <label for="casual">Casual Playthroughs</label>
+        <div id="run_type-radios">
+            <input type="radio" id="hardcore_nuzlockes" value="hardcore_nuzlockes" name="run-type" checked>
+            <label for="hardcore_nuzlockes">Hardcore Nuzlockes</label>
+            <input type="radio" id="casual" value="casual" name="run-type">
+            <label for="casual">Casual Playthroughs</label>
+        </div>
 
         <table id="hof-table"></table>
     </div>

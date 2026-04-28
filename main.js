@@ -6,8 +6,6 @@ fetch('data.json')
     hofData = data;
 });
 
-document.getElementById('')
-
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
 document.getElementById('mini_moon').addEventListener('input', () => buildHofTable());
 
@@ -23,7 +21,7 @@ function getSprite(pokemon) {
 }
 
 function buildHofTable() {
-    if (!hofData) return;
+    if (!Object.keys(hofData).length) return;
 
     document.getElementById("hint").classList.add("hidden");
     document.getElementById("hall-of-fame").classList.remove("hidden");
@@ -72,6 +70,14 @@ function buildHofTable() {
         `);
     });
 
+    if (!entries.length) {
+        entries.push(`
+            <tr>
+                <td colspan="8">No runs found.</td>
+            </tr>
+        `);
+    }
+    
     hof_table.innerHTML = `
         <thead>
             <tr>
