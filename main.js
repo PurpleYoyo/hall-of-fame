@@ -9,10 +9,12 @@ fetch('data.json')
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
 document.getElementById('mini_moon').addEventListener('input', () => buildHofTable());
 
-document.getElementById('hardcore_nuzlocke').addEventListener('input', () => buildHofTable());
+document.getElementById('hardcore_nuzlockes').addEventListener('input', () => buildHofTable());
 document.getElementById('casual').addEventListener('input', () => buildHofTable());
 
 function buildHofTable() {
+    if (!hofData) return;
+
     const hof_table = document.getElementById("hof-table");
     let entries = [];
 
@@ -39,10 +41,10 @@ function buildHofTable() {
     }
 
     if (!run_type) {
-        run_type = 'hardcore_nuzlocke';
+        run_type = 'hardcore_nuzlockes';
     }
 
-    data[game][run_type].forEach(entry => {
+    hofData[game][run_type].forEach(entry => {
         entries.push(`
             <tr>
                 <td>${entry.player}</td>
