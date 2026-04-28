@@ -16,7 +16,7 @@ function formatSpriteName(pokemon) { // To be used for specific special cases.
     if (pokemon.includes('Eevee')) {
         return 'eevee';
     }
-    
+
     return pokemon.toLowerCase();
 }
 
@@ -26,15 +26,15 @@ function getSprite(pokemon) {
 
 const gameSchemas = {
     little_emerald: [
-        { key: 'player', label = 'Player' },
-        { key: 'version', label = 'Version' },
-        { key: 'difficulty', label = 'Difficulty' },
+        { key: 'player', label: 'Player' },
+        { key: 'version', label: 'Version' },
+        { key: 'difficulty', label: 'Difficulty' },
     ],
     mini_moon: [
-        { key: 'player', label = 'Player' },
-        { key: 'version', label = 'Version' },
-        { key: 'date', label = 'Date' },
-        { key: 'starter', label = 'Starter' },
+        { key: 'player', label: 'Player' },
+        { key: 'version', label: 'Version' },
+        { key: 'date', label: 'Date' },
+        { key: 'starter', label: 'Starter' },
     ],
 };
 
