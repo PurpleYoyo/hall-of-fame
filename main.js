@@ -20,73 +20,67 @@ function getSprite(pokemon) {
     return `<img src="https://raw.githubusercontent.com/PurpleYoyo/LittleEmerald-SaveReader/main/sprites/${formatSpriteName(pokemon)}.png" alt="${pokemon}"></img>`;
 }
 
+const gameSchemas = {
+    little_emerald: [
+        { key: 'player', label = 'Player' },
+        { key: 'version', label = 'Version' },
+        { key: 'difficulty', label = 'Difficulty' },
+    ],
+    mini_moon: [
+        { key: 'player', label = 'Player' },
+        { key: 'version', label = 'Version' },
+        { key: 'date', label = 'Date' },
+        { key: 'starter', label = 'Starter' },
+    ],
+};
+
 function buildHofTable() {
     if (!Object.keys(hofData).length) return;
 
-    document.getElementById("hint").classList.add("hidden");
-    document.getElementById("hall-of-fame").classList.remove("hidden");
+    document.getElementById('hint').classList.add('hidden');
+    document.getElementById('hall-of-fame').classList.remove('hidden');
 
-    const hof_table = document.getElementById("hof-table");
-    let entries = [];
+    const hof_table = document.getElementById('hof-table');
 
-    let game = null;
-    const game_radios = document.getElementsByName('game');
-    for (let i = 0; i < game_radios.length; i++) {
-        if (game_radios[i].checked) {
-            game = game_radios[i].value;
-            break;
-        }
-    }
+    const game = document.querySelector('input[name="game"]:checked')?.value || 'little_emerald';
+    const run_type = document.querySelector('input[name="run-type"]:checked')?.value || 'hardcore_nuzlockes';
 
-    if (!game) {
-        game = 'little_emerald';
-    }
+    const schema = gameSchemas[game];
 
-    let run_type = null;
-    const run_type_radios = document.getElementsByName('run-type');
-    for (let i = 0; i < run_type_radios.length; i++) {
-        if (run_type_radios[i].checked) {
-            run_type = run_type_radios[i].value;
-            break;
-        }
-    }
+    const header = `
+        <tr>
+            ${schema.map(col => `<th>${col.label}</th>`).join('')}
+            <th colspan="6">Team</th>
+        </tr>
+    `;
 
-    if (!run_type) {
-        run_type = 'hardcore_nuzlockes';
-    }
-
-    hofData[game][run_type].forEach(entry => {
-        entries.push(`
-            <tr>
-                <td>${entry.player}</td>
-                <td>${entry.version}</td>
-                <td>${getSprite(entry.pokemon1)}</td>
-                <td>${getSprite(entry.pokemon2)}</td>
-                <td>${getSprite(entry.pokemon3)}</td>
-                <td>${getSprite(entry.pokemon4)}</td>
-                <td>${getSprite(entry.pokemon5)}</td>
-                <td>${getSprite(entry.pokemon6)}</td>
-            </tr>
-        `);
-    });
+    let entries = hofData[game][run_type].map(entry => `
+        <tr>
+            ${schema.map(col => `<td>${entry[col.key] ?? '-'}</td>`).join('')}
+            <td>${getSprite(entry.pokemon1)}</td>
+            <td>${getSprite(entry.pokemon2)}</td>
+            <td>${getSprite(entry.pokemon3)}</td>
+            <td>${getSprite(entry.pokemon4)}</td>
+            <td>${getSprite(entry.pokemon5)}</td>
+            <td>${getSprite(entry.pokemon6)}</td>
+        </tr>    
+    `);
 
     if (!entries.length) {
-        document.getElementById("hall-of-fame").innerHTML = 'No runs found.';
+        document.getElementById('hof-table').innerHTML = 'No runs found.';
 
         return;
     }
 
     hof_table.innerHTML = `
-        <thead>
-            <tr>
-                <th>Player</th>
-                <th>Version</th>
-                <th colspan="6">Team</th>
-            </tr>
-        </thead>
+        <table>
+            <thead>
+                ${header}
+            </thead>
 
-        <tbody>
-            ${entries.join('\n')}
-        </tbody>
+            <tbody>
+                ${entries.join('\n')}
+            </tbody>
+        </table>
     `;
 }
