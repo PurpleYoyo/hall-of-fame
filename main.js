@@ -12,7 +12,11 @@ document.getElementById('mini_moon').addEventListener('input', () => buildHofTab
 document.getElementById('hardcore_nuzlockes').addEventListener('input', () => buildHofTable());
 document.getElementById('casual').addEventListener('input', () => buildHofTable());
 
-function formatSpriteName(pokemon) { // To be used for specific special cases; not needed yet.
+function formatSpriteName(pokemon) { // To be used for specific special cases.
+    if (pokemon.includes('Eevee')) {
+        return 'eevee';
+    }
+    
     return pokemon.toLowerCase();
 }
 

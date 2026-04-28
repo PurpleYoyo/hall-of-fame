@@ -4,19 +4,78 @@
             {
                 "version": "1.1",
                 "player": "Purkat",
+                "difficulty": "Hard",
                 "pokemon1": "Tinkatink",
                 "pokemon2": "Honedge",
                 "pokemon3": "Cyndaquil",
                 "pokemon4": "Magnemite",
                 "pokemon5": "Carvanha",
-                "pokemon6": "Stufful",
-                "difficulty": "Hard"
+                "pokemon6": "Stufful"
             }
         ],
-        "casual": []
+        "casual": [
+            {
+                "version": "1.0",
+                "player": "Purkat",
+                "difficulty": "Hard",
+                "pokemon1": "Squirtle",
+                "pokemon2": "Wattrel",
+                "pokemon3": "Honedge",
+                "pokemon4": "Darumaka-Galar",
+                "pokemon5": "Yanma",
+                "pokemon6": "Morelull"
+            },
+            {
+                "version": "1.2",
+                "player": "ajfbxkfjwk",
+                "difficulty": "Hard",
+                "pokemon1": "Scorbunny",
+                "pokemon2": "Mienfoo",
+                "pokemon3": "Voltorb-Hisui",
+                "pokemon4": "Gastly",
+                "pokemon5": "Tinkatink",
+                "pokemon6": "Sneasel"
+            },
+            {
+                "version": "1.3",
+                "player": "Benjiboi",
+                "difficulty": "Hard",
+                "pokemon1": "Pawniard",
+                "pokemon2": "Deino",
+                "pokemon3": "Meowth-Galar",
+                "pokemon4": "Eevee-Dark",
+                "pokemon5": "Qwilfish-Hisui",
+                "pokemon6": "Litten"
+            }
+        ]
     },
     "mini_moon": {
-        "hardcore_nuzlockes": [],
+        "hardcore_nuzlockes": [
+            {
+                "version": "1.1",
+                "player": "Drayano",
+                "date": "February 25, 2026",
+                "starter": "Litten",
+                "pokemon1": "Litten",
+                "pokemon2": "Elekid",
+                "pokemon3": "Sandile",
+                "pokemon4": "Misdreavus",
+                "pokemon5": "Roggenrola",
+                "pokemon6": "Pyukumuku"
+            },
+            {
+                "version": "1.1",
+                "player": "Purkat",
+                "date": "February 26, 2026",
+                "starter": "Rowlet",
+                "pokemon1": "Minior",
+                "pokemon2": "Alomomola",
+                "pokemon3": "Shellder",
+                "pokemon4": "Magnemite",
+                "pokemon5": "Morelull",
+                "pokemon6": "Cutiefly"
+            }
+        ],
         "casual": []
     }
 }
