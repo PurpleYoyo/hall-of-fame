@@ -15,7 +15,7 @@ document.getElementById('hardcore_nuzlockes').addEventListener('input', () => bu
 document.getElementById('casual').addEventListener('input', () => buildHofTable());
 
 function formatSpriteName(pokemon) { // To be used for specific special cases; not needed yet.
-    return pokemon.toLower();
+    return pokemon.toLowerCase();
 }
 
 function getSprite(pokemon) {
