@@ -6,6 +6,15 @@ fetch('data.json')
     hofData = data;
 });
 
+let extraColumns = false;
+document.getElementById('extra-toggle').addEventListener('click', () => {
+    extraColumns = !extraColumns;
+
+    document.querySelectorAll('.extra-col').forEach(col => {
+        col.style.display = extraColumns ? '' : 'none';
+    });
+});
+
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
 document.getElementById('mini_moon').addEventListener('input', () => buildHofTable());
 
@@ -29,19 +38,38 @@ function getSprite(entry, index) {
     return `<img src="${src}" alt="${pokemon}">`;
 }
 
+function getTypeSprite(type) {
+    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${type.toLowerCase().replace('fighting', 'fight')}.png" alt="${type}">`
+}
+
 const gameSchemas = {
     little_emerald: [
-        { key: 'player', label: 'Player' },
-        { key: 'version', label: 'Version' },
-        { key: 'difficulty', label: 'Difficulty' },
+        { key: 'player', label: 'Player', group: "main" },
+        { key: 'version', label: 'Version', group: "main" },
+        { key: 'difficulty', label: 'Difficulty', group: "main" },
+        { key: 'notes', label: 'Notes', group: "extra" },
+        { key: 'monotype', label: 'Monotype', group: "extra" },
+        { key: 'sandbox', label: 'Sandbox?', group: "extra" },
     ],
     mini_moon: [
-        { key: 'player', label: 'Player' },
-        { key: 'version', label: 'Version' },
-        { key: 'date', label: 'Date' },
-        { key: 'starter', label: 'Starter' },
+        { key: 'player', label: 'Player', group: "main" },
+        { key: 'version', label: 'Version', group: "main" },
+        { key: 'date', label: 'Date', group: "main" },
+        { key: 'starter', label: 'Starter', group: "main" },
+        { key: 'notes', label: 'Notes', group: "extra" },
     ],
 };
+
+function getValue(entry, col) {
+    switch (col.key) {
+        case 'sandbox':
+            return entry[col.key] ?? '❌';
+        case 'monotype':
+            return entry[col.key] ? getTypeSprite(entry[col.key]) : '-'
+        default:
+            return entry[col.key] ?? '-';
+    }
+}
 
 function buildHofTable() {
     if (!Object.keys(hofData).length) return;
@@ -58,14 +86,16 @@ function buildHofTable() {
 
     const header = `
         <tr>
-            ${schema.map(col => `<th>${col.label}</th>`).join('')}
+            ${schema.map(col => `<th class="${col.group}-col">${col.label}</th>`).join('')}
             <th colspan="6">Team</th>
         </tr>
     `;
 
     let entries = hofData[game][run_type].map(entry => `
         <tr>
-            ${schema.map(col => `<td>${entry[col.key] ?? '-'}</td>`).join('')}
+            ${schema.map(
+                col => `<td class="${col.group}-col">${getValue(entry, col)}</td>`
+            ).join('')}
             <td>${getSprite(entry, 1)}</td>
             <td>${getSprite(entry, 2)}</td>
             <td>${getSprite(entry, 3)}</td>
@@ -82,6 +112,8 @@ function buildHofTable() {
     }
 
     hof_table.innerHTML = `
+        <button id="extra-toggle">Toggle Extra</button>
+
         <table>
             <thead>
                 ${header}

@@ -46,6 +46,8 @@
                 "pokemon4": "Eevee-Dark",
                 "pokemon5": "Qwilfish-Hisui",
                 "pokemon6": "Litten",
+                "monotype": "Dark",
+                "sandbox": "✅",
                 "sprite_overrides": [
                     {
                         "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/pawniard-shiny.png"
