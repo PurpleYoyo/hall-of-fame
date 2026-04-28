@@ -45,7 +45,7 @@ function buildHofTable() {
     }
 
     let run_type = null;
-    const run_type_radios = document.getElementsByName('run_type');
+    const run_type_radios = document.getElementsByName('run-type');
     for (let i = 0; i < run_type_radios.length; i++) {
         if (run_type_radios[i].checked) {
             run_type = run_type_radios[i].value;
