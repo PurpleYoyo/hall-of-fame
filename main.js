@@ -10,9 +10,7 @@ let extraColumns = false;
 document.getElementById('extra-toggle').addEventListener('click', () => {
     extraColumns = !extraColumns;
 
-    document.querySelectorAll('.extra-col').forEach(col => {
-        col.style.display = extraColumns ? '' : 'none';
-    });
+    document.getElementById('hof-table').classList.toggle('hide-extra', !extraColumns);
 });
 
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
@@ -112,8 +110,6 @@ function buildHofTable() {
     }
 
     hof_table.innerHTML = `
-        <button id="extra-toggle">Toggle Extra</button>
-
         <table>
             <thead>
                 ${header}

@@ -41,3 +41,7 @@ th, td {
 th {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+.hide-extra .extra-col {
+    display: none;
+}
