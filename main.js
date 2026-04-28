@@ -17,7 +17,7 @@ function formatSpriteName(pokemon) { // To be used for specific special cases; n
 }
 
 function getSprite(pokemon) {
-    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/LittleEmerald-SaveReader/main/sprites/${formatSpriteName(pokemon)}.png"></img>`;
+    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/LittleEmerald-SaveReader/main/sprites/${formatSpriteName(pokemon)}.png" alt="${pokemon}"></img>`;
 }
 
 function buildHofTable() {
@@ -77,7 +77,7 @@ function buildHofTable() {
             </tr>
         `);
     }
-    
+
     hof_table.innerHTML = `
         <thead>
             <tr>
