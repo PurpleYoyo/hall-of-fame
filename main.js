@@ -71,11 +71,9 @@ function buildHofTable() {
     });
 
     if (!entries.length) {
-        entries.push(`
-            <tr>
-                <td colspan="8">No runs found.</td>
-            </tr>
-        `);
+        document.getElementById("hall-of-fame").innerHTML = 'No runs found.';
+
+        return;
     }
 
     hof_table.innerHTML = `
