@@ -12,6 +12,14 @@ document.getElementById('mini_moon').addEventListener('input', () => buildHofTab
 document.getElementById('hardcore_nuzlockes').addEventListener('input', () => buildHofTable());
 document.getElementById('casual').addEventListener('input', () => buildHofTable());
 
+function formatSpriteName(pokemon) { // To be used for specific special cases; not needed yet.
+    return pokemon.toLower();
+}
+
+function getSprite(pokemon) {
+    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/LittleEmerald-SaveReader/main/sprites/${formatSpriteName(pokemon)}.png"></img>`;
+}
+
 function buildHofTable() {
     if (!hofData) return;
 
@@ -49,12 +57,12 @@ function buildHofTable() {
             <tr>
                 <td>${entry.player}</td>
                 <td>${entry.version}</td>
-                <td>${entry.pokemon1}</td>
-                <td>${entry.pokemon2}</td>
-                <td>${entry.pokemon3}</td>
-                <td>${entry.pokemon4}</td>
-                <td>${entry.pokemon5}</td>
-                <td>${entry.pokemon6}</td>
+                <td>${getSprite(entry.pokemon1)}</td>
+                <td>${getSprite(entry.pokemon2)}</td>
+                <td>${getSprite(entry.pokemon3)}</td>
+                <td>${getSprite(entry.pokemon4)}</td>
+                <td>${getSprite(entry.pokemon5)}</td>
+                <td>${getSprite(entry.pokemon6)}</td>
             </tr>
         `);
     });
