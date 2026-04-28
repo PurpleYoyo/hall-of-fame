@@ -20,7 +20,7 @@ html {
     align-items: stretch;
 }
 
-.hidden {
+#hidden {
     display: none;
 }
 
