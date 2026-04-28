@@ -20,6 +20,10 @@ html {
     align-items: stretch;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Sidebar */
 .sidebar {
     height: 100%;

@@ -6,6 +6,8 @@ fetch('data.json')
     hofData = data;
 });
 
+document.getElementById('')
+
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
 document.getElementById('mini_moon').addEventListener('input', () => buildHofTable());
 
@@ -22,6 +24,9 @@ function getSprite(pokemon) {
 
 function buildHofTable() {
     if (!hofData) return;
+
+    document.getElementById("hint").classList.add("hidden");
+    document.getElementById("hall-of-fame").classList.remove("hidden");
 
     const hof_table = document.getElementById("hof-table");
     let entries = [];
