@@ -1,0 +1,21 @@
+{
+    "little_emerald": {
+        "hardcore_nuzlockes": [
+            {
+                "version": "1.1",
+                "player": "Purkat",
+                "pokemon1": "Tinkatink",
+                "pokemon2": "Honedge",
+                "pokemon3": "Cyndaquil",
+                "pokemon4": "Magnemite",
+                "pokemon5": "Carvanha",
+                "pokemon6": "Stufful"
+            }
+        ],
+        "casual": []
+    },
+    "mini_moon": {
+        "hardcore_nuzlockes": [],
+        "casual": []
+    }
+}
