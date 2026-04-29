@@ -73,9 +73,9 @@ function getValue(entry, col, run_type) {
             return entry[col.key] ? getTypeSprite(entry[col.key]) : '-';
         case 'attempts':
         case 'deaths':
-            return entry[col.key] ?? run_type === 'hardcore_nuzlockes' ? '?' : '-';
+            return entry[col.key] ?? (run_type === 'hardcore_nuzlockes' ? '?' : '-');
         case 'starter':
-            return entry[col.key] ? getSprite(entry[col.key]) : '?';
+            return entry[col.key] ? getSprite(entry, 0) : '?';
         default:
             return entry[col.key] ?? '-';
     }
