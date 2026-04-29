@@ -26,7 +26,7 @@ html {
 }
 
 .bounty {
-    background-color: lightgreen;
+    background-color: #61A061;
 }
 /* Table */
 table {
@@ -50,7 +50,7 @@ th {
 }
 
 /* Button */
-.button {
+button {
     appearance: button;
     backface-visibility: hidden;
     background-color: #B6E6FC;
