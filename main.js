@@ -29,6 +29,7 @@ function formatSpriteName(pokemon) { // To be used for specific special cases.
 
 function getSprite(entry, index) {
     const sprite_override = entry.sprite_overrides?.[`pokemon${index}`];
+    console.log(sprite_override);
     const pokemon = entry[`pokemon${index}`];
     const src = sprite_override ?
         sprite_override :
