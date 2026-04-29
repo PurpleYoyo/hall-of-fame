@@ -131,9 +131,9 @@ function buildHofTable() {
 
     if (!entries.length) {
         document.getElementById('hof-table').innerHTML = `
-            <br><
+            <br>
             
-            span>No runs found.</span>
+            <span>No runs found.</span>
         `;
 
         return;
