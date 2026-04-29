@@ -127,16 +127,17 @@ function buildHofTable() {
     const schema = gameSchemas[game][run_type];
 
     let title = ''
+    let team = 'Team';
     if (run_type === 'hardcore_nuzlockes') {
         title = 'Bounties (Pokémon that have not been champed before) have a green background.';
+        team = 'Team <span class="info">🛈</span>';
     }
 
     const header = `
         <tr>
             ${schema.map(col => `<th class="${col.group}-col">${col.label}</th>`).join('')}
             <th title="${title}" colspan="6">
-                Team 
-                <span class="info">🛈</span>
+                ${team}
             </th>
         </tr>
     `;
