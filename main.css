@@ -118,22 +118,22 @@ label {
     align-items: center;
     gap: 0.8em;
     border: 3px solid #B6E6FC;
-    padding: 1em 2em;
+    padding: 10px;
     border-radius: 10px;
 }
 
 label:before {
     content: "";
-    height: 2em;
-    width: 2em;
+    height: 10px;
+    width: 10px;
     border: 3px solid #B6E6FC;
     border-radius: 50%;
 }
 
 input[type="radio"]:checked + label:before {
-    height: 1em;
-    width: 1em;
-    border: 0.65em solid #ffffff;
+    height: 10px;
+    width: 10px;
+    border: 3px solid #ffffff;
     background-color: #B6E6FC;
 }
 
