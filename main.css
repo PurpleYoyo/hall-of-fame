@@ -16,7 +16,6 @@ html {
     border-radius: 10px;
     max-width: 900px;
     margin: auto;
-    display: flex;
     flex-direction: column;
     align-items: stretch;
 }
