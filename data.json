@@ -10,7 +10,8 @@
                 "pokemon3": "Cyndaquil",
                 "pokemon4": "Magnemite",
                 "pokemon5": "Carvanha",
-                "pokemon6": "Stufful"
+                "pokemon6": "Stufful",
+                "bounties": [1, 2, 3, 4, 5, 6]
             }
         ],
         "casual": [
@@ -68,7 +69,8 @@
                 "pokemon3": "Sandile",
                 "pokemon4": "Misdreavus",
                 "pokemon5": "Roggenrola",
-                "pokemon6": "Pyukumuku"
+                "pokemon6": "Pyukumuku",
+                "bounties": [1, 2, 3, 4, 5, 6]
             },
             {
                 "version": "1.1",
@@ -81,6 +83,7 @@
                 "pokemon4": "Magnemite",
                 "pokemon5": "Morelull",
                 "pokemon6": "Cutiefly",
+                "bounties": [1, 2, 3, 4, 5, 6],
                 "sprite_overrides": [
                     {
                         "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"

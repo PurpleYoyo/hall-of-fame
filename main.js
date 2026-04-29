@@ -63,10 +63,14 @@ function getValue(entry, col) {
         case 'sandbox':
             return entry[col.key] ?? '❌';
         case 'monotype':
-            return entry[col.key] ? getTypeSprite(entry[col.key]) : '-'
+            return entry[col.key] ? getTypeSprite(entry[col.key]) : '-';
         default:
             return entry[col.key] ?? '-';
     }
+}
+
+function getBounties(entry, index) {
+    return (entry.bounties || []).includes(entry) ? 'bounty' : 'normal';
 }
 
 function buildHofTable() {
@@ -95,12 +99,12 @@ function buildHofTable() {
             ${schema.map(
                 col => `<td class="${col.group}-col">${getValue(entry, col)}</td>`
             ).join('')}
-            <td>${getSprite(entry, 1)}</td>
-            <td>${getSprite(entry, 2)}</td>
-            <td>${getSprite(entry, 3)}</td>
-            <td>${getSprite(entry, 4)}</td>
-            <td>${getSprite(entry, 5)}</td>
-            <td>${getSprite(entry, 6)}</td>
+            <td class="${getBounties(entry, 1)}">${getSprite(entry, 1)}</td>
+            <td class="${getBounties(entry, 2)}">${getSprite(entry, 2)}</td>
+            <td class="${getBounties(entry, 3)}">${getSprite(entry, 3)}</td>
+            <td class="${getBounties(entry, 4)}">${getSprite(entry, 4)}</td>
+            <td class="${getBounties(entry, 5)}">${getSprite(entry, 5)}</td>
+            <td class="${getBounties(entry, 6)}">${getSprite(entry, 6)}</td>
         </tr>    
     `);
 

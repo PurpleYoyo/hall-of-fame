@@ -24,6 +24,9 @@ html {
     display: none;
 }
 
+.bounty {
+    background-color: lightgreen;
+}
 /* Table */
 table {
     width: 100%;
