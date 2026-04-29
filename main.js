@@ -71,7 +71,7 @@ function getValue(entry, col) {
 }
 
 function getBounties(entry, index) {
-    return (entry.bounties || []).includes(entry) ? 'bounty' : 'normal';
+    return (entry.bounties || []).includes(index) ? 'bounty' : 'normal';
 }
 
 function buildHofTable() {

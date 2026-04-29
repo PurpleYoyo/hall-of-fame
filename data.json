@@ -49,11 +49,9 @@
                 "pokemon6": "Litten",
                 "monotype": "Dark",
                 "sandbox": "✅",
-                "sprite_overrides": [
-                    {
-                        "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/pawniard-shiny.png"
-                    }
-                ]
+                "sprite_overrides": {
+                    "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/pawniard-shiny.png"
+                }
             }
         ]
     },
@@ -84,11 +82,9 @@
                 "pokemon5": "Morelull",
                 "pokemon6": "Cutiefly",
                 "bounties": [1, 2, 3, 4, 5, 6],
-                "sprite_overrides": [
-                    {
-                        "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"
-                    }
-                ]
+                "sprite_overrides": {
+                    "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"
+                }
             }
         ],
         "casual": []
