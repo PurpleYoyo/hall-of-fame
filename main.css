@@ -104,6 +104,11 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+button.clicked {
+    color: white;
+    font-weight: bold;
+}
+
 /* Radio buttons */
 input[type="radio"] {
     display: none;
@@ -117,24 +122,13 @@ label {
     display: inline-flex;
     align-items: center;
     gap: 0.8em;
-    border: 3px solid #B6E6FC;
-    padding: 10px;
-    border-radius: 10px;
+    border-bottom: 3px solid #B6E6FC;
+    padding: 5px;
 }
 
-label:before {
-    content: "";
-    height: 10px;
-    width: 10px;
-    border: 3px solid #B6E6FC;
-    border-radius: 50%;
-}
-
-input[type="radio"]:checked + label:before {
-    height: 10px;
-    width: 10px;
-    border: 3px solid #ffffff;
-    background-color: #B6E6FC;
+input[type="radio"]:checked + label {
+    color: white;
+    font-weight: bold;
 }
 
 /* Sidebar */

@@ -7,10 +7,12 @@ fetch('data.json')
 });
 
 let extraColumns = false;
+const btn = document.getElementById('extra-toggle');
 document.getElementById('extra-toggle').addEventListener('click', () => {
     extraColumns = !extraColumns;
 
     document.getElementById('hof-table').classList.toggle('hide-extra', !extraColumns);
+    btn.classList.toggle('active', extraColumns);
 });
 
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
