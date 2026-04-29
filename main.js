@@ -54,7 +54,7 @@ const gameSchemas = {
             { key: 'date', label: 'Date', group: "main" },
             { key: 'attempts', label: 'Attempts', group: "main" },
             { key: 'difficulty', label: 'Difficulty', group: "main" },
-            { key: 'starter', label: 'Starter', group: "main" },
+            { key: 'starter', label: 'Starter', group: "extra" },
             { key: 'deaths', label: 'Deaths', group: "extra" },
             { key: 'monotype', label: 'Monotype', group: "extra" },
             { key: 'sandbox', label: 'Sandbox?', group: "extra" },
