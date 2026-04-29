@@ -45,16 +45,22 @@ const gameSchemas = {
     little_emerald: [
         { key: 'player', label: 'Player', group: "main" },
         { key: 'version', label: 'Version', group: "main" },
+        { key: 'date', label: 'Date', group: "main" },
+        { key: 'attempts', label: 'Attempts', group: "main" },
         { key: 'difficulty', label: 'Difficulty', group: "main" },
-        { key: 'notes', label: 'Notes', group: "extra" },
+        { key: 'starter', label: 'Starter', group: "main" },
+        { key: 'deaths', label: 'Deaths', group: "extra" },
         { key: 'monotype', label: 'Monotype', group: "extra" },
         { key: 'sandbox', label: 'Sandbox?', group: "extra" },
+        { key: 'notes', label: 'Notes', group: "extra" },
     ],
     mini_moon: [
         { key: 'player', label: 'Player', group: "main" },
         { key: 'version', label: 'Version', group: "main" },
         { key: 'date', label: 'Date', group: "main" },
+        { key: 'attempts', label: 'Attempts', group: "main" },
         { key: 'starter', label: 'Starter', group: "main" },
+        { key: 'deaths', label: 'Deaths', group: "extra" },
         { key: 'notes', label: 'Notes', group: "extra" },
     ],
 };
@@ -65,6 +71,10 @@ function getValue(entry, col) {
             return entry[col.key] ?? '❌';
         case 'monotype':
             return entry[col.key] ? getTypeSprite(entry[col.key]) : '-';
+        case 'attempts':
+        case 'starter':
+        case 'deaths':
+            return entry[col.key] ?? '?';
         default:
             return entry[col.key] ?? '-';
     }
