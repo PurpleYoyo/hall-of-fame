@@ -110,7 +110,7 @@ function buildHofTable() {
     }
 
     hof_table.innerHTML = `
-        <table>
+        <table class="hide-extra">
             <thead>
                 ${header}
             </thead>
