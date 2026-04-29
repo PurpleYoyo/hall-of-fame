@@ -12,7 +12,7 @@ document.getElementById('extra-toggle').addEventListener('click', () => {
     extraColumns = !extraColumns;
 
     document.getElementById('hof-table').classList.toggle('hide-extra', !extraColumns);
-    btn.classList.toggle('active', extraColumns);
+    btn.classList.toggle('clicked', extraColumns);
 });
 
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
@@ -47,27 +47,48 @@ function getTypeSprite(type) {
 }
 
 const gameSchemas = {
-    little_emerald: [
-        { key: 'player', label: 'Player', group: "main" },
-        { key: 'version', label: 'Version', group: "main" },
-        { key: 'date', label: 'Date', group: "main" },
-        { key: 'attempts', label: 'Attempts', group: "main" },
-        { key: 'difficulty', label: 'Difficulty', group: "main" },
-        { key: 'starter', label: 'Starter', group: "main" },
-        { key: 'deaths', label: 'Deaths', group: "extra" },
-        { key: 'monotype', label: 'Monotype', group: "extra" },
-        { key: 'sandbox', label: 'Sandbox?', group: "extra" },
-        { key: 'notes', label: 'Notes', group: "extra" },
-    ],
-    mini_moon: [
-        { key: 'player', label: 'Player', group: "main" },
-        { key: 'version', label: 'Version', group: "main" },
-        { key: 'date', label: 'Date', group: "main" },
-        { key: 'attempts', label: 'Attempts', group: "main" },
-        { key: 'starter', label: 'Starter', group: "main" },
-        { key: 'deaths', label: 'Deaths', group: "extra" },
-        { key: 'notes', label: 'Notes', group: "extra" },
-    ],
+    little_emerald: {
+        hardcore_nuzlockes: [
+            { key: 'player', label: 'Player', group: "main" },
+            { key: 'version', label: 'Version', group: "main" },
+            { key: 'date', label: 'Date', group: "main" },
+            { key: 'attempts', label: 'Attempts', group: "main" },
+            { key: 'difficulty', label: 'Difficulty', group: "main" },
+            { key: 'starter', label: 'Starter', group: "main" },
+            { key: 'deaths', label: 'Deaths', group: "extra" },
+            { key: 'monotype', label: 'Monotype', group: "extra" },
+            { key: 'sandbox', label: 'Sandbox?', group: "extra" },
+            { key: 'notes', label: 'Notes', group: "extra" },
+        ],
+        casual: [
+            { key: 'player', label: 'Player', group: "main" },
+            { key: 'version', label: 'Version', group: "main" },
+            { key: 'date', label: 'Date', group: "main" },
+            { key: 'difficulty', label: 'Difficulty', group: "main" },
+            { key: 'starter', label: 'Starter', group: "extra" },
+            { key: 'monotype', label: 'Monotype', group: "extra" },
+            { key: 'sandbox', label: 'Sandbox?', group: "extra" },
+            { key: 'notes', label: 'Notes', group: "extra" },
+        ],
+    },
+    mini_moon: {
+        hardcore_nuzlockes: [
+            { key: 'player', label: 'Player', group: "main" },
+            { key: 'version', label: 'Version', group: "main" },
+            { key: 'date', label: 'Date', group: "main" },
+            { key: 'attempts', label: 'Attempts', group: "main" },
+            { key: 'starter', label: 'Starter', group: "extra" },
+            { key: 'deaths', label: 'Deaths', group: "extra" },
+            { key: 'notes', label: 'Notes', group: "extra" },
+        ],
+        casual: [
+            { key: 'player', label: 'Player', group: "main" },
+            { key: 'version', label: 'Version', group: "main" },
+            { key: 'date', label: 'Date', group: "main" },
+            { key: 'starter', label: 'Starter', group: "extra" },
+            { key: 'notes', label: 'Notes', group: "extra" },
+        ],
+    },
 };
 
 function getValue(entry, col, run_type) {
@@ -103,7 +124,7 @@ function buildHofTable() {
     const game = document.querySelector('input[name="game"]:checked')?.value || 'little_emerald';
     const run_type = document.querySelector('input[name="run-type"]:checked')?.value || 'hardcore_nuzlockes';
 
-    const schema = gameSchemas[game];
+    const schema = gameSchemas[game][run_type];
 
     let title = ''
     if (run_type === 'hardcore_nuzlockes') {
