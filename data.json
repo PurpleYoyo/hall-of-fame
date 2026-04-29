@@ -13,6 +13,7 @@
                 "pokemon5": "Carvanha",
                 "pokemon6": "Stufful",
                 "starter": "Scorbunny",
+                "attempts": 3,
                 "deaths": 18,
                 "bounties": [1, 2, 3, 4, 5, 6]
             }
@@ -77,6 +78,7 @@
                 "pokemon5": "Roggenrola",
                 "pokemon6": "Pyukumuku",
                 "deaths": 11,
+                "attempts": 4,
                 "bounties": [1, 2, 3, 4, 5, 6]
             },
             {
@@ -91,6 +93,7 @@
                 "pokemon5": "Morelull",
                 "pokemon6": "Cutiefly",
                 "deaths": 10,
+                "attempts": 1,
                 "bounties": [1, 2, 3, 4, 5, 6],
                 "sprite_overrides": {
                     "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"
