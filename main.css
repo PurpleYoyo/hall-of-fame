@@ -28,6 +28,17 @@ html {
 .bounty {
     background-color: #61A061;
 }
+
+span {
+    color: #B6E6FC;
+}
+
+h1 {
+    color: #B6E6FC;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 3px solid #B6E6FC;
+}
+
 /* Table */
 table {
     width: 100%;
