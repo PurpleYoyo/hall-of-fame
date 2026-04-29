@@ -65,7 +65,7 @@ const gameSchemas = {
     ],
 };
 
-function getValue(entry, col) {
+function getValue(entry, col, run_type) {
     switch (col.key) {
         case 'sandbox':
             return entry[col.key] ?? '❌';
@@ -74,7 +74,7 @@ function getValue(entry, col) {
         case 'attempts':
         case 'starter':
         case 'deaths':
-            return entry[col.key] ?? '?';
+            return entry[col.key] ?? run_type === 'hardcore_nuzlockes' ? '?' : '-';
         default:
             return entry[col.key] ?? '-';
     }
@@ -99,17 +99,24 @@ function buildHofTable() {
 
     const schema = gameSchemas[game];
 
+    if (run_type === 'hardcore_nuzlockes') {
+        const title = 'Bounties (Pokémon that have not been champed before) have a green background.';
+    }
+    else {
+        const title = '';
+    }
+
     const header = `
         <tr>
             ${schema.map(col => `<th class="${col.group}-col">${col.label}</th>`).join('')}
-            <th colspan="6">Team</th>
+            <th title="${title}" colspan="6">Team</th>
         </tr>
     `;
 
     let entries = hofData[game][run_type].map(entry => `
         <tr>
             ${schema.map(
-                col => `<td class="${col.group}-col">${getValue(entry, col)}</td>`
+                col => `<td class="${col.group}-col">${getValue(entry, col, run_type)}</td>`
             ).join('')}
             <td class="${getBounties(entry, 1)}">${getSprite(entry, 1)}</td>
             <td class="${getBounties(entry, 2)}">${getSprite(entry, 2)}</td>
