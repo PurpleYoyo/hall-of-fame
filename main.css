@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* General */
-html {
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: #B6E6FC;
     background-size: cover;
@@ -152,11 +152,8 @@ input[type="radio"]:checked + label:before {
 }
   
 .sidebar a {
-    padding: 10px 20px;
     text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
+    color: #B6E6FC;
 }
   
 .sidebar .closebtn {
@@ -165,12 +162,11 @@ input[type="radio"]:checked + label:before {
     right: 20px;
     font-size: 30px;
 }
-  
-#openSidebarBtn {
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px;
-    display: block;
-    background-color: #222;
+
+.sidebar p {
     color: white;
+}
+
+.openbtn {
+    color: black;
 }
