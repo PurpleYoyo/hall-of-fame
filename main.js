@@ -76,7 +76,7 @@ function getBounties(entry, index) {
 function buildHofTable() {
     if (!Object.keys(hofData).length) return;
 
-    document.getElementById('extra-toggle').classList.add('hidden');
+    document.getElementById('extra-toggle').classList.remove('hidden');
     document.getElementById('hint').classList.add('hidden');
     document.getElementById('hall-of-fame').classList.remove('hidden');
 
