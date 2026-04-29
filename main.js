@@ -39,11 +39,11 @@ function getSprite(entry, index) {
 }
 
 function getStarterSprite(pokemon) {
-    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${formatSpriteName(pokemon)}.png" alt="${pokemon}">`;
+    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${formatSpriteName(pokemon)}.png" alt="${pokemon}" title="${pokemon}">`;
 }
 
 function getTypeSprite(type) {
-    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${type.toLowerCase().replace('fighting', 'fight')}.png" alt="${type}">`
+    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${type.toLowerCase().replace('fighting', 'fight')}.png" alt="${type}" title="${type}">`
 }
 
 const gameSchemas = {
@@ -134,7 +134,10 @@ function buildHofTable() {
     const header = `
         <tr>
             ${schema.map(col => `<th class="${col.group}-col">${col.label}</th>`).join('')}
-            <th title="${title}" colspan="6">Team</th>
+            <th title="${title}" colspan="6">
+                Team 
+                <span class="info">🛈</span>
+            </th>
         </tr>
     `;
 

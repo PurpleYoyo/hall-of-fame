@@ -29,7 +29,11 @@ body {
     background-color: #61A061;
 }
 
-span {
+.info {
+    font-weight: lighter;
+}
+
+#hint {
     color: #B6E6FC;
 }
 
