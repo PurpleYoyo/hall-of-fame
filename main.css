@@ -59,8 +59,12 @@ th, td {
     text-align: center;
 }
 
-th {
+th.main-col {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+th.extra-col {
+    background-color: #91686F;
 }
 
 .hide-extra .extra-col {
