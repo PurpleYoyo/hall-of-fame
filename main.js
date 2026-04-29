@@ -72,9 +72,10 @@ function getValue(entry, col, run_type) {
         case 'monotype':
             return entry[col.key] ? getTypeSprite(entry[col.key]) : '-';
         case 'attempts':
-        case 'starter':
         case 'deaths':
             return entry[col.key] ?? run_type === 'hardcore_nuzlockes' ? '?' : '-';
+        case 'starter':
+            return entry[col.key] ? getSprite(entry[col.key]) : '?';
         default:
             return entry[col.key] ?? '-';
     }
@@ -99,11 +100,9 @@ function buildHofTable() {
 
     const schema = gameSchemas[game];
 
+    let title = ''
     if (run_type === 'hardcore_nuzlockes') {
-        const title = 'Bounties (Pokémon that have not been champed before) have a green background.';
-    }
-    else {
-        const title = '';
+        title = 'Bounties (Pokémon that have not been champed before) have a green background.';
     }
 
     const header = `
