@@ -160,7 +160,7 @@ function buildHofTable() {
         document.getElementById('hof-table').innerHTML = `
             <br>
             
-            <span>No runs found.</span>
+            <span id="hint">No runs found.</span>
         `;
 
         return;
