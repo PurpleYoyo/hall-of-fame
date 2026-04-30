@@ -30,8 +30,8 @@ function formatSpriteName(pokemon) { // To be used for specific special cases.
 }
 
 function getSprite(entry, style) {
-    const sprite_override = entry[`pokemon${index}`]?.sprite_override;
-    const pokemon = entry[`pokemon${index}`].pokemon;
+    const sprite_override = entry?.sprite_override;
+    const pokemon = entry.pokemon;
 
     let src;
     let link = null;
@@ -42,7 +42,7 @@ function getSprite(entry, style) {
             src = `https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${sprite}.png`;
             break;
         case 'pmd':
-            const pokedex = entry[`pokemon${index}`].pokedex;
+            const pokedex = entry.pokedex;
             src = `https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/${pokedex}/Normal.png`;
             link = `https://sprites.pmdcollab.org/#/${pokedex}?form=0`;
             break;
