@@ -166,6 +166,11 @@ input[type="radio"]:checked + label {
 
 .sidebar p {
     color: white;
+    padding: 30px;
+}
+
+#sidebar-container {
+    text-align: center;
 }
 
 .openbtn {
