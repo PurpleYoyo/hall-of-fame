@@ -6,16 +6,33 @@
                 "player": "Purkat",
                 "difficulty": "Hard",
                 "date": "March 16, 2025",
-                "pokemon1": "Tinkatink",
-                "pokemon2": "Honedge",
-                "pokemon3": "Cyndaquil",
-                "pokemon4": "Magnemite",
-                "pokemon5": "Carvanha",
-                "pokemon6": "Stufful",
+                "pokemon1": {
+                    "pokemon": "Tinkatink",
+                    "bounty": true
+                },
+                "pokemon2": {
+                    "pokemon": "Honedge",
+                    "bounty": true
+                },
+                "pokemon3": {
+                    "pokemon": "Cyndaquil",
+                    "bounty": true
+                },
+                "pokemon4": {
+                    "pokemon": "Magnemite",
+                    "bounty": true
+                },
+                "pokemon5": {
+                    "pokemon": "Carvanha",
+                    "bounty": true
+                },
+                "pokemon6": {
+                    "pokemon": "Stufful",
+                    "bounty": true
+                },
                 "starter": "Scorbunny",
                 "attempts": 3,
-                "deaths": 18,
-                "bounties": [1, 2, 3, 4, 5, 6]
+                "deaths": 18
             }
         ],
         "casual": [
@@ -24,12 +41,24 @@
                 "player": "Purkat",
                 "difficulty": "Hard",
                 "date": "March 1, 2025",
-                "pokemon1": "Squirtle",
-                "pokemon2": "Wattrel",
-                "pokemon3": "Honedge",
-                "pokemon4": "Darumaka-Galar",
-                "pokemon5": "Yanma",
-                "pokemon6": "Morelull",
+                "pokemon1": {
+                    "pokemon": "Squirtle"
+                },
+                "pokemon2": {
+                    "pokemon": "Wattrel"
+                },
+                "pokemon3": {
+                    "pokemon": "Honedge"
+                },
+                "pokemon4": {
+                    "pokemon": "Darumaka-Galar"
+                },
+                "pokemon5": {
+                    "pokemon": "Yanma"
+                },
+                "pokemon6": {
+                    "pokemon": "Morelull"
+                },
                 "starter": "Squirtle"
             },
             {
@@ -37,12 +66,24 @@
                 "player": "ajfbxkfjwk",
                 "difficulty": "Hard",
                 "date": "May 2, 2025",
-                "pokemon1": "Scorbunny",
-                "pokemon2": "Mienfoo",
-                "pokemon3": "Voltorb-Hisui",
-                "pokemon4": "Gastly",
-                "pokemon5": "Tinkatink",
-                "pokemon6": "Sneasel",
+                "pokemon1": {
+                    "pokemon": "Scorbunny"
+                },
+                "pokemon2": {
+                    "pokemon": "Mienfoo"
+                },
+                "pokemon3": {
+                    "pokemon": "Voltorb-Hisui"
+                },
+                "pokemon4": {
+                    "pokemon": "Gastly"
+                },
+                "pokemon5": {
+                    "pokemon": "Tinkatink"
+                },
+                "pokemon6": {
+                    "pokemon": "Sneasel"
+                },
                 "starter": "Squirtle"
             },
             {
@@ -50,17 +91,27 @@
                 "player": "Benjiboi",
                 "difficulty": "Hard",
                 "date": "June 24, 2025",
-                "pokemon1": "Pawniard",
-                "pokemon2": "Deino",
-                "pokemon3": "Meowth-Galar",
-                "pokemon4": "Eevee-Dark",
-                "pokemon5": "Qwilfish-Hisui",
-                "pokemon6": "Litten",
+                "pokemon1": {
+                    "pokemon": "Pawniard",
+                    "sprite_override": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/pawniard-shiny.png"
+                },
+                "pokemon2": {
+                    "pokemon": "Deino"
+                },
+                "pokemon3": {
+                    "pokemon": "Meowth-Alola"
+                },
+                "pokemon4": {
+                    "pokemon": "Eevee-Dark"
+                },
+                "pokemon5": {
+                    "pokemon": "Qwilfish-Hisui"
+                },
+                "pokemon6": {
+                    "pokemon": "Litten"
+                },
                 "monotype": "Dark",
-                "sandbox": "✅",
-                "sprite_overrides": {
-                    "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/pawniard-shiny.png"
-                }
+                "sandbox": true
             }
         ]
     },
@@ -71,33 +122,65 @@
                 "player": "Drayano",
                 "date": "February 25, 2026",
                 "starter": "Litten",
-                "pokemon1": "Litten",
-                "pokemon2": "Elekid",
-                "pokemon3": "Sandile",
-                "pokemon4": "Misdreavus",
-                "pokemon5": "Roggenrola",
-                "pokemon6": "Pyukumuku",
+                "pokemon1": {
+                    "pokemon": "Litten",
+                    "bounty": true
+                },
+                "pokemon2": {
+                    "pokemon": "Elekid",
+                    "bounty": true
+                },
+                "pokemon3": {
+                    "pokemon": "Sandile",
+                    "bounty": true
+                },
+                "pokemon4": {
+                    "pokemon": "Misdreavus",
+                    "bounty": true
+                },
+                "pokemon5": {
+                    "pokemon": "Roggenrola",
+                    "bounty": true
+                },
+                "pokemon6": {
+                    "pokemon": "Pyukumuku",
+                    "bounty": true
+                },
                 "deaths": 11,
-                "attempts": 4,
-                "bounties": [1, 2, 3, 4, 5, 6]
+                "attempts": 4
             },
             {
                 "version": "1.1",
                 "player": "Purkat",
                 "date": "February 26, 2026",
                 "starter": "Rowlet",
-                "pokemon1": "Minior",
-                "pokemon2": "Alomomola",
-                "pokemon3": "Shellder",
-                "pokemon4": "Magnemite",
-                "pokemon5": "Morelull",
-                "pokemon6": "Cutiefly",
+                "pokemon1": {
+                    "pokemon": "Minior",
+                    "bounty": true,
+                    "sprite_override": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"
+                },
+                "pokemon2": {
+                    "pokemon": "Alomomola",
+                    "bounty": true
+                },
+                "pokemon3": {
+                    "pokemon": "Shellder",
+                    "bounty": true
+                },
+                "pokemon4": {
+                    "pokemon": "Magnemite",
+                    "bounty": true
+                },
+                "pokemon5": {
+                    "pokemon": "Morelull",
+                    "bounty": true
+                },
+                "pokemon6": {
+                    "pokemon": "Cutiefly",
+                    "bounty": true
+                },
                 "deaths": 10,
-                "attempts": 1,
-                "bounties": [1, 2, 3, 4, 5, 6],
-                "sprite_overrides": {
-                    "pokemon1": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"
-                }
+                "attempts": 1
             }
         ],
         "casual": []

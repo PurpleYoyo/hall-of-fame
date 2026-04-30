@@ -30,8 +30,8 @@ function formatSpriteName(pokemon) { // To be used for specific special cases.
 }
 
 function getSprite(entry, index) {
-    const sprite_override = entry.sprite_overrides?.[`pokemon${index}`];
-    const pokemon = entry[`pokemon${index}`];
+    const sprite_override = entry[`pokemon${index}`]?.sprite_override;
+    const pokemon = entry[`pokemon${index}`].pokemon;
     const src = sprite_override ?
         sprite_override :
         `https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${formatSpriteName(pokemon)}.png`;
@@ -55,6 +55,7 @@ const gameSchemas = {
             { key: 'attempts', label: 'Attempts', group: "main" },
             { key: 'difficulty', label: 'Difficulty', group: "main" },
             { key: 'starter', label: 'Starter', group: "extra" },
+            { key: 'mvp', label: 'MVP', group: "extra" },
             { key: 'deaths', label: 'Deaths', group: "extra" },
             { key: 'monotype', label: 'Monotype', group: "extra" },
             { key: 'sandbox', label: 'Sandbox?', group: "extra" },
@@ -78,6 +79,7 @@ const gameSchemas = {
             { key: 'date', label: 'Date', group: "main" },
             { key: 'attempts', label: 'Attempts', group: "main" },
             { key: 'starter', label: 'Starter', group: "extra" },
+            { key: 'mvp', label: 'MVP', group: "extra" },
             { key: 'deaths', label: 'Deaths', group: "extra" },
             { key: 'notes', label: 'Notes', group: "extra" },
         ],
@@ -94,21 +96,22 @@ const gameSchemas = {
 function getValue(entry, col, run_type) {
     switch (col.key) {
         case 'sandbox':
-            return entry[col.key] ?? '❌';
+            return entry[col.key] ? '✅' : '❌';
         case 'monotype':
             return entry[col.key] ? getTypeSprite(entry[col.key]) : '-';
         case 'attempts':
         case 'deaths':
-            return entry[col.key] ?? (run_type === 'hardcore_nuzlockes' ? '?' : '-');
+            return entry[col.key] ?? '?';
         case 'starter':
+        case 'mvp':
             return entry[col.key] ? getStarterSprite(entry[col.key]) : '?';
         default:
             return entry[col.key] ?? '-';
     }
 }
 
-function getBounties(entry, index) {
-    return (entry.bounties || []).includes(index) ? 'bounty' : 'normal';
+function isBounty(entry, index) {
+    return entry[`pokemon${index}`]?.bounty ? 'bounty' : 'normal';
 }
 
 function buildHofTable() {
@@ -130,13 +133,13 @@ function buildHofTable() {
     let team = 'Team';
     if (run_type === 'hardcore_nuzlockes') {
         title = 'Bounties (Pokémon that have not been champed before) have a green background.';
-        team = 'Team <span class="info">🛈</span>';
+        team = `Team <span title="${title}" class="info">🛈</span>`;
     }
 
     const header = `
         <tr>
             ${schema.map(col => `<th class="${col.group}-col">${col.label}</th>`).join('')}
-            <th title="${title}" colspan="6">
+            <th colspan="6">
                 ${team}
             </th>
         </tr>
@@ -147,12 +150,12 @@ function buildHofTable() {
             ${schema.map(
                 col => `<td class="${col.group}-col">${getValue(entry, col, run_type)}</td>`
             ).join('')}
-            <td class="${getBounties(entry, 1)}">${getSprite(entry, 1)}</td>
-            <td class="${getBounties(entry, 2)}">${getSprite(entry, 2)}</td>
-            <td class="${getBounties(entry, 3)}">${getSprite(entry, 3)}</td>
-            <td class="${getBounties(entry, 4)}">${getSprite(entry, 4)}</td>
-            <td class="${getBounties(entry, 5)}">${getSprite(entry, 5)}</td>
-            <td class="${getBounties(entry, 6)}">${getSprite(entry, 6)}</td>
+            <td class="${isBounty(entry, 1)}">${getSprite(entry, 1)}</td>
+            <td class="${isBounty(entry, 2)}">${getSprite(entry, 2)}</td>
+            <td class="${isBounty(entry, 3)}">${getSprite(entry, 3)}</td>
+            <td class="${isBounty(entry, 4)}">${getSprite(entry, 4)}</td>
+            <td class="${isBounty(entry, 5)}">${getSprite(entry, 5)}</td>
+            <td class="${isBounty(entry, 6)}">${getSprite(entry, 6)}</td>
         </tr>    
     `);
 
