@@ -114,7 +114,7 @@ function getBounties(entry, index) {
 function buildHofTable() {
     if (!Object.keys(hofData).length) return;
 
-    document.getElementById('extra-toggle').classList.remove('hidden');
+    btn.classList.remove('hidden');
     document.getElementById('run_type-radios').classList.remove('hidden');
     document.getElementById('hint').classList.add('hidden');
     document.getElementById('hall-of-fame').classList.remove('hidden');
@@ -157,6 +157,8 @@ function buildHofTable() {
     `);
 
     if (!entries.length) {
+        btn.classList.add('hidden');
+
         document.getElementById('hof-table').innerHTML = `
             <br>
             
