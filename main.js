@@ -132,7 +132,7 @@ function getValue(entry, col, run_type) {
         case 'mvp':
             return entry[col.key] ? getStarterSprite(entry[col.key]) : '?';
         case 'watch':
-            return makeLink(entry[col.key]);
+            return entry[col.key] ? makeLink(entry[col.key]) : '-';
         default:
             return entry[col.key] ?? '-';
     }
