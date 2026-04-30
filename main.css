@@ -70,6 +70,10 @@ td img.pmd {
     border: 2px solid black
 }
 
+td a {
+    text-decoration: none;
+}
+
 th.extra-col {
     background-color: #91686F;
 }
