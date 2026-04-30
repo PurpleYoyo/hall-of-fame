@@ -35,7 +35,7 @@ function getSprite(entry, index) {
     const src = sprite_override ?
         sprite_override :
         `https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${formatSpriteName(pokemon)}.png`;
-    return `<img src="${src}" alt="${pokemon}">`;
+    return `<img src="${src}" alt="${pokemon}" title="${pokemon}">`;
 }
 
 function getStarterSprite(pokemon) {
