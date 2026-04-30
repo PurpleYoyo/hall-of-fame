@@ -29,7 +29,7 @@ function formatSpriteName(pokemon) { // To be used for specific special cases.
     return pokemon.toLowerCase();
 }
 
-function getSprite(entry, index, style) {
+function getSprite(entry, style) {
     const sprite_override = entry[`pokemon${index}`]?.sprite_override;
     const pokemon = entry[`pokemon${index}`].pokemon;
 
@@ -142,8 +142,8 @@ function makeLink(entry) {
     return `<a href="${entry.link}">${entry.name}</a>`;
 }
 
-function isBounty(entry, index) {
-    return entry[`pokemon${index}`]?.bounty ? 'bounty' : 'normal';
+function isBounty(entry) {
+    return entry?.bounty ? 'bounty' : 'normal';
 }
 
 function buildHofTable() {
@@ -183,12 +183,12 @@ function buildHofTable() {
             ${schema.map(
                 col => `<td class="${col.group}-col">${getValue(entry, col, run_type)}</td>`
             ).join('')}
-            <td class="${isBounty(entry, 1)}">${getSprite(sprite_style, entry, 1)}</td>
-            <td class="${isBounty(entry, 2)}">${getSprite(sprite_style, entry, 2)}</td>
-            <td class="${isBounty(entry, 3)}">${getSprite(sprite_style, entry, 3)}</td>
-            <td class="${isBounty(entry, 4)}">${getSprite(sprite_style, entry, 4)}</td>
-            <td class="${isBounty(entry, 5)}">${getSprite(sprite_style, entry, 5)}</td>
-            <td class="${isBounty(entry, 6)}">${getSprite(sprite_style, entry, 6)}</td>
+            <td class="${isBounty(entry.pokemon1)}">${getSprite(entry.pokemon1, sprite_style)}</td>
+            <td class="${isBounty(entry.pokemon2)}">${getSprite(entry.pokemon2, sprite_style)}</td>
+            <td class="${isBounty(entry.pokemon3)}">${getSprite(entry.pokemon3, sprite_style)}</td>
+            <td class="${isBounty(entry.pokemon4)}">${getSprite(entry.pokemon4, sprite_style)}</td>
+            <td class="${isBounty(entry.pokemon5)}">${getSprite(entry.pokemon5, sprite_style)}</td>
+            <td class="${isBounty(entry.pokemon6)}">${getSprite(entry.pokemon6, sprite_style)}</td>
         </tr>    
     `);
 
