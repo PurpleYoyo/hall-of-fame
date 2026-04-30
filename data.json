@@ -124,30 +124,40 @@
                 "starter": "Litten",
                 "pokemon1": {
                     "pokemon": "Litten",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0725"
                 },
                 "pokemon2": {
                     "pokemon": "Elekid",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0239"
                 },
                 "pokemon3": {
                     "pokemon": "Sandile",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0551"
                 },
                 "pokemon4": {
                     "pokemon": "Misdreavus",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0200"
                 },
                 "pokemon5": {
                     "pokemon": "Roggenrola",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0524"
                 },
                 "pokemon6": {
                     "pokemon": "Pyukumuku",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0771"
                 },
                 "deaths": 11,
-                "attempts": 4
+                "attempts": 4,
+                "watch": {
+                    "name": "VOD Playlist",
+                    "link": "https://www.youtube.com/playlist?list=PLcvzi6sE1VZoZCPlq-NhPnQ1YD-u3gxmn"
+                }
             },
             {
                 "version": "1.1",
@@ -157,30 +167,40 @@
                 "pokemon1": {
                     "pokemon": "Minior",
                     "bounty": true,
-                    "sprite_override": "https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/minior-core_red.png"
+                    "sprite_override": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0774/0001/Normal.png",
+                    "pokedex": "0771"
                 },
                 "pokemon2": {
                     "pokemon": "Alomomola",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0594"
                 },
                 "pokemon3": {
                     "pokemon": "Shellder",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0090"
                 },
                 "pokemon4": {
                     "pokemon": "Magnemite",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0081"
                 },
                 "pokemon5": {
                     "pokemon": "Morelull",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0755"
                 },
                 "pokemon6": {
                     "pokemon": "Cutiefly",
-                    "bounty": true
+                    "bounty": true,
+                    "pokedex": "0742"
                 },
                 "deaths": 10,
-                "attempts": 1
+                "attempts": 1,
+                "watch": {
+                    "name": "Boss Battles Playlist",
+                    "link": "https://www.youtube.com/playlist?list=PLCUZ6bCWZ9R1-_0TsQ6baktXDNXAEwkgD"
+                }
             }
         ],
         "casual": []

@@ -29,13 +29,35 @@ function formatSpriteName(pokemon) { // To be used for specific special cases.
     return pokemon.toLowerCase();
 }
 
-function getSprite(entry, index) {
+function getSprite(entry, index, style) {
     const sprite_override = entry[`pokemon${index}`]?.sprite_override;
     const pokemon = entry[`pokemon${index}`].pokemon;
-    const src = sprite_override ?
-        sprite_override :
-        `https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${formatSpriteName(pokemon)}.png`;
-    return `<img src="${src}" alt="${pokemon}" title="${pokemon}">`;
+
+    let src;
+    let link = null;
+    
+    switch (style) {
+        case 'sprites':
+            const sprite = formatSpriteName(pokemon);
+            src = `https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${sprite}.png`;
+            break;
+        case 'pmd':
+            const pokedex = entry[`pokemon${index}`].pokedex;
+            src = `https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/${pokedex}/Normal.png`;
+            link = `https://sprites.pmdcollab.org/#/${pokedex}?form=0`;
+            break;
+    }
+
+    if (sprite_override) {
+        src = sprite_override;
+    }
+
+    if (link) {
+        return `<a href="${link}"><img class="${style}" src="${src}" alt="${pokemon}" title="${pokemon}"></a>`;
+    }
+    else {
+        return `<img class="${style}" src="${src}" alt="${pokemon}" title="${pokemon}">`;
+    }
 }
 
 function getStarterSprite(pokemon) {
@@ -48,47 +70,51 @@ function getTypeSprite(type) {
 
 const gameSchemas = {
     little_emerald: {
+        "sprite_style": "sprites",
         hardcore_nuzlockes: [
-            { key: 'player', label: 'Player', group: "main" },
-            { key: 'version', label: 'Version', group: "main" },
-            { key: 'date', label: 'Date', group: "main" },
-            { key: 'attempts', label: 'Attempts', group: "main" },
-            { key: 'difficulty', label: 'Difficulty', group: "main" },
-            { key: 'starter', label: 'Starter', group: "extra" },
-            { key: 'mvp', label: 'MVP', group: "extra" },
-            { key: 'deaths', label: 'Deaths', group: "extra" },
-            { key: 'monotype', label: 'Monotype', group: "extra" },
-            { key: 'sandbox', label: 'Sandbox?', group: "extra" },
-            { key: 'notes', label: 'Notes', group: "extra" },
+            { key: 'player', label: 'Player', group: 'main' },
+            { key: 'version', label: 'Version', group: 'main' },
+            { key: 'date', label: 'Date', group: 'main' },
+            { key: 'attempts', label: 'Attempts', group: 'main' },
+            { key: 'difficulty', label: 'Difficulty', group: 'main' },
+            { key: 'starter', label: 'Starter', group: 'extra' },
+            { key: 'mvp', label: 'MVP', group: 'extra' },
+            { key: 'deaths', label: 'Deaths', group: 'extra' },
+            { key: 'monotype', label: 'Monotype', group: 'extra' },
+            { key: 'sandbox', label: 'Sandbox?', group: 'extra' },
+            { key: 'notes', label: 'Notes', group: 'extra' },
+            { key: 'watch', label: 'Watch', group: 'extra' },
         ],
         casual: [
-            { key: 'player', label: 'Player', group: "main" },
-            { key: 'version', label: 'Version', group: "main" },
-            { key: 'date', label: 'Date', group: "main" },
-            { key: 'difficulty', label: 'Difficulty', group: "main" },
-            { key: 'starter', label: 'Starter', group: "extra" },
-            { key: 'monotype', label: 'Monotype', group: "extra" },
-            { key: 'sandbox', label: 'Sandbox?', group: "extra" },
-            { key: 'notes', label: 'Notes', group: "extra" },
+            { key: 'player', label: 'Player', group: 'main' },
+            { key: 'version', label: 'Version', group: 'main' },
+            { key: 'date', label: 'Date', group: 'main' },
+            { key: 'difficulty', label: 'Difficulty', group: 'main' },
+            { key: 'starter', label: 'Starter', group: 'extra' },
+            { key: 'monotype', label: 'Monotype', group: 'extra' },
+            { key: 'sandbox', label: 'Sandbox?', group: 'extra' },
+            { key: 'notes', label: 'Notes', group: 'extra' },
         ],
     },
     mini_moon: {
+        "sprite_style": "pmd",
         hardcore_nuzlockes: [
-            { key: 'player', label: 'Player', group: "main" },
-            { key: 'version', label: 'Version', group: "main" },
-            { key: 'date', label: 'Date', group: "main" },
-            { key: 'attempts', label: 'Attempts', group: "main" },
-            { key: 'starter', label: 'Starter', group: "extra" },
-            { key: 'mvp', label: 'MVP', group: "extra" },
-            { key: 'deaths', label: 'Deaths', group: "extra" },
-            { key: 'notes', label: 'Notes', group: "extra" },
+            { key: 'player', label: 'Player', group: 'main' },
+            { key: 'version', label: 'Version', group: 'main' },
+            { key: 'date', label: 'Date', group: 'main' },
+            { key: 'attempts', label: 'Attempts', group: 'main' },
+            { key: 'starter', label: 'Starter', group: 'extra' },
+            { key: 'mvp', label: 'MVP', group: 'extra' },
+            { key: 'deaths', label: 'Deaths', group: 'extra' },
+            { key: 'notes', label: 'Notes', group: 'extra' },
+            { key: 'watch', label: 'Watch', group: 'extra' },
         ],
         casual: [
-            { key: 'player', label: 'Player', group: "main" },
-            { key: 'version', label: 'Version', group: "main" },
-            { key: 'date', label: 'Date', group: "main" },
-            { key: 'starter', label: 'Starter', group: "extra" },
-            { key: 'notes', label: 'Notes', group: "extra" },
+            { key: 'player', label: 'Player', group: 'main' },
+            { key: 'version', label: 'Version', group: 'main' },
+            { key: 'date', label: 'Date', group: 'main' },
+            { key: 'starter', label: 'Starter', group: 'extra' },
+            { key: 'notes', label: 'Notes', group: 'extra' },
         ],
     },
 };
@@ -105,9 +131,15 @@ function getValue(entry, col, run_type) {
         case 'starter':
         case 'mvp':
             return entry[col.key] ? getStarterSprite(entry[col.key]) : '?';
+        case 'watch':
+            return makeLink(entry[col.key]);
         default:
             return entry[col.key] ?? '-';
     }
+}
+
+function makeLink(entry) {
+    return `<a href="${entry.link}">${entry.name}</a>`;
 }
 
 function isBounty(entry, index) {
@@ -128,6 +160,7 @@ function buildHofTable() {
     const run_type = document.querySelector('input[name="run-type"]:checked')?.value || 'hardcore_nuzlockes';
 
     const schema = gameSchemas[game][run_type];
+    const sprite_style = gameSchemas[game].sprite_style;
 
     let title = ''
     let team = 'Team';
@@ -150,12 +183,12 @@ function buildHofTable() {
             ${schema.map(
                 col => `<td class="${col.group}-col">${getValue(entry, col, run_type)}</td>`
             ).join('')}
-            <td class="${isBounty(entry, 1)}">${getSprite(entry, 1)}</td>
-            <td class="${isBounty(entry, 2)}">${getSprite(entry, 2)}</td>
-            <td class="${isBounty(entry, 3)}">${getSprite(entry, 3)}</td>
-            <td class="${isBounty(entry, 4)}">${getSprite(entry, 4)}</td>
-            <td class="${isBounty(entry, 5)}">${getSprite(entry, 5)}</td>
-            <td class="${isBounty(entry, 6)}">${getSprite(entry, 6)}</td>
+            <td class="${isBounty(entry, 1)}">${getSprite(sprite_style, entry, 1)}</td>
+            <td class="${isBounty(entry, 2)}">${getSprite(sprite_style, entry, 2)}</td>
+            <td class="${isBounty(entry, 3)}">${getSprite(sprite_style, entry, 3)}</td>
+            <td class="${isBounty(entry, 4)}">${getSprite(sprite_style, entry, 4)}</td>
+            <td class="${isBounty(entry, 5)}">${getSprite(sprite_style, entry, 5)}</td>
+            <td class="${isBounty(entry, 6)}">${getSprite(sprite_style, entry, 6)}</td>
         </tr>    
     `);
 

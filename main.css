@@ -66,6 +66,10 @@ th, td {
     text-align: center;
 }
 
+td img.pmd {
+    border: 2px solid black
+}
+
 th.extra-col {
     background-color: #91686F;
 }
