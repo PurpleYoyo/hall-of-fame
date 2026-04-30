@@ -6,41 +6,43 @@
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="smallchung.png" type="image/png">
     <script type="module" src="main.js"></script>
-
-    <div id="sidebar-container"></div>
 </head>
 
 <body>
-    <h1 class="title">Purkat's ROMhacks Hall of Fame</h1>
-    
-    <br>
+    <div id="sidebar-container"></div>
 
-    <div id="hall-of-fame" class="hidden">
-        <div id="game-radios">
-            <input type="radio" id="little_emerald" value="little_emerald" name="game">
-            <label for="little_emerald">Little Emerald</label>
-            <input type="radio" id="mini_moon" value="mini_moon" name="game">
-            <label for="mini_moon">Mini Moon</label>
+    <div class="content-container">
+        <h1 class="title">Purkat's ROMhacks Hall of Fame</h1>
+        
+        <br>
+
+        <div id="hall-of-fame" class="hidden">
+            <div id="game-radios">
+                <input type="radio" id="little_emerald" value="little_emerald" name="game">
+                <label for="little_emerald">Little Emerald</label>
+                <input type="radio" id="mini_moon" value="mini_moon" name="game">
+                <label for="mini_moon">Mini Moon</label>
+            </div>
+
+            <br>
+
+            <span id ="hint">Choose a game to see the Hall of Fame.</span>
+
+            <div id="run_type-radios" class="hidden">
+                <input type="radio" id="hardcore_nuzlockes" value="hardcore_nuzlockes" name="run-type" checked>
+                <label for="hardcore_nuzlockes">Hardcore Nuzlockes</label>
+                <input type="radio" id="casual" value="casual" name="run-type">
+                <label for="casual">Casual Playthroughs</label>
+            </div>
+
+            <br>
+
+            <button id="extra-toggle" class="hidden">Toggle Extra Columns</button>
+
+            <br>
+
+            <div id="hof-table" class="hide-extra"></div>
         </div>
-
-        <br>
-
-        <span id ="hint">Choose a game to see the Hall of Fame.</span>
-
-        <div id="run_type-radios" class="hidden">
-            <input type="radio" id="hardcore_nuzlockes" value="hardcore_nuzlockes" name="run-type" checked>
-            <label for="hardcore_nuzlockes">Hardcore Nuzlockes</label>
-            <input type="radio" id="casual" value="casual" name="run-type">
-            <label for="casual">Casual Playthroughs</label>
-        </div>
-
-        <br>
-
-        <button id="extra-toggle" class="hidden">Toggle Extra Columns</button>
-
-        <br>
-
-        <div id="hof-table" class="hide-extra"></div>
     </div>
 
     <script>
