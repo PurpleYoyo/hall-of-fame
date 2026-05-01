@@ -40,6 +40,12 @@ html {
     color: #B6E6FC;
 }
 
+#credits {
+    text-decoration: none;
+    color: #B6E6FC;
+    text-align: right;
+}
+
 h1 {
     color: #B6E6FC;
     background-color: rgba(0, 0, 0, 0.5);
@@ -72,6 +78,7 @@ td img.pmd {
 
 td a {
     text-decoration: none;
+    color: #B6E6FC;
 }
 
 th.extra-col {

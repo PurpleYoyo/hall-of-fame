@@ -162,6 +162,13 @@ function buildHofTable() {
     const schema = gameSchemas[game][run_type];
     const sprite_style = gameSchemas[game].sprite_style;
 
+    if (sprite_style === 'pmd') {
+        document.getElementById('credits').classList.remove('hidden');
+    }
+    else {
+        document.getElementById('credits').classList.add('hidden');
+    }
+
     let title = ''
     let team = 'Team';
     if (run_type === 'hardcore_nuzlockes') {
