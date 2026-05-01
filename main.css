@@ -40,6 +40,10 @@ html {
     color: #B6E6FC;
 }
 
+#game-radios {
+    margin-bottom: 10px;
+}
+
 span a {
     text-decoration: none;
     color: #B6E6FC;
