@@ -60,10 +60,6 @@ function getSprite(entry, style) {
     }
 }
 
-function getStarterSprite(pokemon) {
-    return `<img src="https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${formatSpriteName(pokemon)}.png" alt="${pokemon}" title="${pokemon}">`;
-}
-
 function getTypeSprite(type) {
     return `<img src="https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/sprites/${type.toLowerCase().replace('fighting', 'fight')}.png" alt="${type}" title="${type}">`
 }
@@ -119,7 +115,7 @@ const gameSchemas = {
     },
 };
 
-function getValue(entry, col, run_type) {
+function getValue(entry, col, run_type, style) {
     switch (col.key) {
         case 'sandbox':
             return entry[col.key] ? '✅' : '❌';
@@ -130,7 +126,7 @@ function getValue(entry, col, run_type) {
             return entry[col.key] ?? '?';
         case 'starter':
         case 'mvp':
-            return entry[col.key] ? getStarterSprite(entry[col.key]) : '?';
+            return entry[col.key] ? getSprite(entry[col.key], style) : '?';
         case 'watch':
             return entry[col.key] ? makeLink(entry[col.key]) : '-';
         default:
@@ -188,7 +184,7 @@ function buildHofTable() {
     let entries = hofData[game][run_type].map(entry => `
         <tr>
             ${schema.map(
-                col => `<td class="${col.group}-col">${getValue(entry, col, run_type)}</td>`
+                col => `<td class="${col.group}-col">${getValue(entry, col, run_type, sprite_style)}</td>`
             ).join('')}
             <td class="${isBounty(entry.pokemon1)}">${getSprite(entry.pokemon1, sprite_style)}</td>
             <td class="${isBounty(entry.pokemon2)}">${getSprite(entry.pokemon2, sprite_style)}</td>

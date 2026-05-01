@@ -6,6 +6,9 @@
                 "player": "Purkat",
                 "difficulty": "Hard",
                 "date": "March 16, 2025",
+                "starter": {
+                    "pokemon": "Scorbunny"
+                },
                 "pokemon1": {
                     "pokemon": "Tinkatink",
                     "bounty": true
@@ -30,7 +33,6 @@
                     "pokemon": "Stufful",
                     "bounty": true
                 },
-                "starter": "Scorbunny",
                 "attempts": 3,
                 "deaths": 18
             }
@@ -41,6 +43,9 @@
                 "player": "Purkat",
                 "difficulty": "Hard",
                 "date": "March 1, 2025",
+                "starter": {
+                    "pokemon": "Squirtle"
+                },
                 "pokemon1": {
                     "pokemon": "Squirtle"
                 },
@@ -58,14 +63,16 @@
                 },
                 "pokemon6": {
                     "pokemon": "Morelull"
-                },
-                "starter": "Squirtle"
+                }
             },
             {
                 "version": "1.2",
                 "player": "ajfbxkfjwk",
                 "difficulty": "Hard",
                 "date": "May 2, 2025",
+                "starter": {
+                    "pokemon": "Squirtle"
+                },
                 "pokemon1": {
                     "pokemon": "Scorbunny"
                 },
@@ -83,8 +90,7 @@
                 },
                 "pokemon6": {
                     "pokemon": "Sneasel"
-                },
-                "starter": "Squirtle"
+                }
             },
             {
                 "version": "1.3",
@@ -121,7 +127,10 @@
                 "version": "1.1",
                 "player": "Drayano",
                 "date": "February 25, 2026",
-                "starter": "Litten",
+                "starter": {
+                    "pokemon": "Litten",
+                    "pokedex": "0725"
+                },
                 "pokemon1": {
                     "pokemon": "Litten",
                     "bounty": true,
@@ -163,7 +172,10 @@
                 "version": "1.1",
                 "player": "Purkat",
                 "date": "February 26, 2026",
-                "starter": "Rowlet",
+                "starter": {
+                    "pokemon": "Rowlet",
+                    "pokedex": "0722"
+                },
                 "pokemon1": {
                     "pokemon": "Minior",
                     "bounty": true,
