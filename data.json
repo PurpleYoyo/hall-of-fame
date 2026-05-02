@@ -67,6 +67,31 @@
             },
             {
                 "version": "1.2",
+                "player": "patheticLoserGuy",
+                "difficulty": "Normal",
+                "date": "April 30, 2025",
+                "pokemon1": {
+                    "pokemon": "Lickitung"
+                },
+                "pokemon2": {
+                    "pokemon": "Yamper"
+                },
+                "pokemon3": {
+                    "pokemon": "Swirlix"
+                },
+                "pokemon4": {
+                    "pokemon": "Gligar"
+                },
+                "pokemon5": {
+                    "pokemon": "Zigzagoon-Galar"
+                },
+                "pokemon6": {
+                    "pokemon": "Shellder"
+                },
+                "notes": "Tongue out team"
+            },
+            {
+                "version": "1.2",
                 "player": "ajfbxkfjwk",
                 "difficulty": "Hard",
                 "date": "May 2, 2025",
@@ -90,6 +115,33 @@
                 },
                 "pokemon6": {
                     "pokemon": "Sneasel"
+                }
+            },
+            {
+                "version": "1.2",
+                "player": "Masterball",
+                "difficulty": "Hard",
+                "date": "May 23, 2025",
+                "starter": {
+                    "pokemon": "Snivy"
+                },
+                "pokemon1": {
+                    "pokemon": "Zorua"
+                },
+                "pokemon2": {
+                    "pokemon": "Charmander"
+                },
+                "pokemon3": {
+                    "pokemon": "Snivy"
+                },
+                "pokemon4": {
+                    "pokemon": "Snover"
+                },
+                "pokemon5": {
+                    "pokemon": "Elekid"
+                },
+                "pokemon6": {
+                    "pokemon": "Buizel"
                 }
             },
             {
