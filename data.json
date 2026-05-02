@@ -274,25 +274,32 @@
                 "player": "Purkat",
                 "date": "January 2, 2026",
                 "starter": {
-                    "pokemon": "Rowlet"
+                    "pokemon": "Rowlet",
+                    "pokedex": "0722"
                 },
                 "pokemon1": {
-                    "pokemon": "Archen"
+                    "pokemon": "Archen",
+                    "pokedex": "0566"
                 },
                 "pokemon2": {
-                    "pokemon": "Stufful"
+                    "pokemon": "Stufful",
+                    "pokedex": "0759"
                 },
                 "pokemon3": {
-                    "pokemon": "Togedemaru"
+                    "pokemon": "Togedemaru",
+                    "pokedex": "0777"
                 },
                 "pokemon4": {
-                    "pokemon": "Pyukumuku"
+                    "pokemon": "Pyukumuku",
+                    "pokedex": "0771"
                 },
                 "pokemon5": {
-                    "pokemon": "Sneasel"
+                    "pokemon": "Sneasel",
+                    "pokedex": "0215"
                 },
                 "pokemon6": {
-                    "pokemon": "Magby"
+                    "pokemon": "Magby",
+                    "pokedex": "0240"
                 },
                 "notes": "Development run"
             }
