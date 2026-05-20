@@ -17,6 +17,7 @@ document.getElementById('extra-toggle').addEventListener('click', () => {
 
 document.getElementById('little_emerald').addEventListener('input', () => buildHofTable());
 document.getElementById('mini_moon').addEventListener('input', () => buildHofTable());
+document.getElementById('ultra_small_sun').addEventListener('input', () => buildHofTable());
 
 document.getElementById('hardcore_nuzlockes').addEventListener('input', () => buildHofTable());
 document.getElementById('casual').addEventListener('input', () => buildHofTable());
