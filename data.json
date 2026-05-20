@@ -304,5 +304,45 @@
                 "notes": "Development run"
             }
         ]
+    },
+    "ultra_small_sun": {
+        "hardcore_nuzlockes": [],
+        "casual": [
+            {
+                "version": "1.0",
+                "player": "Purkat",
+                "date": "May 20, 2026",
+                "starter": {
+                    "pokemon": "Popplio",
+                    "pokedex": "0728"
+                },
+                "pokemon1": {
+                    "pokemon": "Anorith",
+                    "pokedex": "0347"
+                },
+                "pokemon2": {
+                    "pokemon": "Oricorio",
+                    "pokedex": "0741"
+                },
+                "pokemon3": {
+                    "pokemon": "Cubone",
+                    "pokedex": "0104"
+                },
+                "pokemon4": {
+                    "pokemon": "Comfey",
+                    "pokedex": "764"
+                },
+                "pokemon5": {
+                    "pokemon": "Pikachu",
+                    "sprite_override": "https://raw.githubusercontent.com/PMDCollab/SpriteCollab/master/portrait/0025/0014/Normal.png",
+                    "pokedex": "0025"
+                },
+                "pokemon6": {
+                    "pokemon": "Mawile",
+                    "pokedex": "0303"
+                },
+                "notes": "Development run"
+            }
+        ]
     }
 }

@@ -113,6 +113,27 @@ const gameSchemas = {
             { key: 'notes', label: 'Notes', group: 'extra' },
         ],
     },
+    ultra_small_sun: {
+        "sprite_style": "pmd",
+        hardcore_nuzlockes: [
+            { key: 'player', label: 'Player', group: 'main' },
+            { key: 'version', label: 'Version', group: 'main' },
+            { key: 'date', label: 'Date', group: 'main' },
+            { key: 'attempts', label: 'Attempts', group: 'main' },
+            { key: 'starter', label: 'Starter', group: 'extra' },
+            { key: 'mvp', label: 'MVP', group: 'extra' },
+            { key: 'deaths', label: 'Deaths', group: 'extra' },
+            { key: 'notes', label: 'Notes', group: 'extra' },
+            { key: 'watch', label: 'Watch', group: 'extra' },
+        ],
+        casual: [
+            { key: 'player', label: 'Player', group: 'main' },
+            { key: 'version', label: 'Version', group: 'main' },
+            { key: 'date', label: 'Date', group: 'main' },
+            { key: 'starter', label: 'Starter', group: 'extra' },
+            { key: 'notes', label: 'Notes', group: 'extra' },
+        ],
+    },
 };
 
 function getValue(entry, col, run_type, style) {
