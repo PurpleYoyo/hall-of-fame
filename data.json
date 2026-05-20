@@ -309,7 +309,7 @@
         "hardcore_nuzlockes": [],
         "casual": [
             {
-                "version": "1.0",
+                "version": "0.0",
                 "player": "Purkat",
                 "date": "May 20, 2026",
                 "starter": {
@@ -330,7 +330,7 @@
                 },
                 "pokemon4": {
                     "pokemon": "Comfey",
-                    "pokedex": "764"
+                    "pokedex": "0764"
                 },
                 "pokemon5": {
                     "pokemon": "Pikachu",
