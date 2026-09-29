@@ -49,7 +49,6 @@ function getSprite(entry, style) {
             link = `https://sprites.pmdcollab.org/#/${pokedex}?form=0`;
             break;
         case 'plush':
-            src = `plushies/${pokemon}.jpg`;
         default:
             break;
     }

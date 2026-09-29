@@ -82,6 +82,10 @@ td img.pmd {
     border: 2px solid black
 }
 
+td img.plush {
+    border: 2px solid black
+}
+
 td a {
     text-decoration: none;
     color: #B6E6FC;
