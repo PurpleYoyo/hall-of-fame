@@ -344,5 +344,43 @@
                 "notes": "Development run"
             }
         ]
+    },
+    "firered_omega_lowercase": {
+        "hardcore_nuzlockes": [
+            {
+                "version": "0.0",
+                "player": "Purkat",
+                "date": "September 29, 2026",
+                "starter": {
+                    "pokemon": "Magby"
+                },
+                "pokemon1": {
+                    "pokemon": "Archen",
+                    "bounty": true
+                },
+                "pokemon2": {
+                    "pokemon": "Honedge",
+                    "bounty": true
+                },
+                "pokemon3": {
+                    "pokemon": "Castform",
+                    "bounty": true
+                },
+                "pokemon4": {
+                    "pokemon": "Skitty",
+                    "bounty": true
+                },
+                "pokemon5": {
+                    "pokemon": "Tangela",
+                    "bounty": true
+                },
+                "pokemon6": {
+                    "pokemon": "Staryu",
+                    "bounty": true
+                },
+                "notes": "Development run"
+            }
+        ],
+        "casual": []
     }
 }
