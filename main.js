@@ -49,6 +49,8 @@ function getSprite(entry, style) {
             link = `https://sprites.pmdcollab.org/#/${pokedex}?form=0`;
             break;
         case 'plush':
+            src = `https://raw.githubusercontent.com/PurpleYoyo/hall-of-fame/main/plushies/${pokemon}.jpg`;
+            break;
         default:
             break;
     }

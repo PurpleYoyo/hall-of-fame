@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /* General */
+img {
+    width: 50px;
+}
+
 html {
     font-family: 'Montserrat', sans-serif;
     background-color: #B6E6FC;
@@ -78,11 +82,8 @@ th, td {
     text-align: center;
 }
 
+td img.plush,
 td img.pmd {
-    border: 2px solid black
-}
-
-td img.plush {
     border: 2px solid black
 }
 
