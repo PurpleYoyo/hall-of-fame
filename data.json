@@ -352,43 +352,35 @@
                 "player": "Purkat",
                 "date": "September 28, 2026",
                 "starter": {
-                    "pokemon": "Magby",
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/a/a4/Sitting_Cuties_Magby.jpg/120px-Sitting_Cuties_Magby.jpg"
+                    "pokemon": "Magby"
                 },
                 "pokemon1": {
                     "pokemon": "Archen",
-                    "bounty": true,
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/1/1a/Sitting_Cuties_Archen.jpg/120px-Sitting_Cuties_Archen.jpg"
+                    "bounty": true
                 },
                 "pokemon2": {
                     "pokemon": "Honedge",
-                    "bounty": true,
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/e/eb/Sitting_Cuties_Honedge.jpg/120px-Sitting_Cuties_Honedge.jpg"
+                    "bounty": true
                 },
                 "pokemon3": {
                     "pokemon": "Castform",
-                    "bounty": true,
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/9/9f/Sitting_Cuties_Castform.jpg/120px-Sitting_Cuties_Castform.jpg"
+                    "bounty": true
                 },
                 "pokemon4": {
                     "pokemon": "Skitty",
-                    "bounty": true,
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/8/87/Sitting_Cuties_Skitty.jpg/120px-Sitting_Cuties_Skitty.jpg"
+                    "bounty": true
                 },
                 "pokemon5": {
                     "pokemon": "Tangela",
-                    "bounty": true,
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/7/77/Sitting_Cuties_Tangela.jpg/120px-Sitting_Cuties_Tangela.jpg"
+                    "bounty": true
                 },
                 "pokemon6": {
                     "pokemon": "Staryu",
-                    "bounty": true,
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/4/4f/Sitting_Cuties_Staryu.jpg/120px-Sitting_Cuties_Staryu.jpg"
+                    "bounty": true
                 },
                 "mvp": {
                     "pokemon": "Honedge",
-                    "bounty": true,
-                    "sprite_override": "https://archives.bulbagarden.net/media/upload/thumb/e/eb/Sitting_Cuties_Honedge.jpg/120px-Sitting_Cuties_Honedge.jpg"
+                    "bounty": true
                 },
                 "deaths": 17,
                 "attempts": 1,
